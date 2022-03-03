@@ -48,8 +48,12 @@ class RoomData(
         }
         else {
 
-//            26500 => "2억 6,500" 변경 함수
-            return
+//            26500 / 10000 = 2  나눗셈은 몫을 구하는 공식이다. => "2억 6,500" 변경 함수
+            val uk = price / 10000
+            val leftNumber = price % 10000
+            val formattedLeftNumber = java.text.NumberFormat.getNumberInstance(Locale.KOREA).format(leftNumber)
+
+            return "${uk}억 ${formattedLeftNumber}"
         }
 
     }
