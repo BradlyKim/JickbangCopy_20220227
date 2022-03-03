@@ -1,4 +1,8 @@
 package com.neppplus.jickbangcopy_20220227.datas
+
+import android.icu.text.NumberFormat
+import java.util.*
+
 //   ListView 사용법 메뉴얼 -> 3번 항목 작업
 //   하나의 방 -> 가격, 행정구역, 층수, 설명문구 멤버변수로
 
@@ -31,5 +35,23 @@ class RoomData(
     }
     
 //    가격값 => "8,500", "2억3,500" 형태로 가공 함수
+
+    fun getFormattedPrice() : String {
+
+        if (price < 10000) {
+
+//            구글링해서 쉼표찍는 법 검색 "android int comma"
+            val formattedPrice = java.text.NumberFormat.getNumberInstance(Locale.KOREA).format(price)
+
+            return formattedPrice
+
+        }
+        else {
+
+//            26500 => "2억 6,500" 변경 함수
+            return
+        }
+
+    }
     
 }

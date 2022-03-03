@@ -38,7 +38,11 @@ class RoomAdapter(
         val txtAddressFloor = row.findViewById<TextView>(R.id.txtAddressFloor)
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
-        txtPrice.text = data.price.toString()
+
+        //        RoomData.kt 에서 만든 함수 반영
+        txtPrice.text = data.getFormattedPrice()
+        
+//        RoomData.kt 에서 만든 함수 반영
         txtAddressFloor.text = "${data.address}, ${data.getFormattedFloor()}"
         txtDescription.text = data.description
 
