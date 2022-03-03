@@ -11,7 +11,7 @@ import com.neppplus.jickbangcopy_20220227.datas.RoomData
 //    ListView 사용법 메뉴얼 -> 4번 항목 작업
 class RoomAdapter(
     val mContext : Context,
-    val resdId : Int,
+    resdId : Int,
     val mList : ArrayList<RoomData>,
 ) : ArrayAdapter<RoomData>(mContext, resdId, mList ) {   //  ctrl + P => 지원 생성자 목록조회
 

@@ -1,11 +1,10 @@
-<!--    ListView 사용법 메뉴얼   -> 2번 항목 작업-->
-
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!--    ListView 사용법 메뉴얼   -> 2번 항목 작업-->
     <ImageView
         android:layout_width="120dp"
         android:layout_height="100dp"
