@@ -1,5 +1,6 @@
 package com.neppplus.jickbangcopy_20220227
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.neppplus.jickbangcopy_20220227.adapters.RoomAdapter
@@ -34,5 +35,15 @@ class MainActivity : AppCompatActivity() {
         mRoomAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
         roomListView.adapter = mRoomAdapter
 
+//        리스트뷰의 이벤트 처리 작업
+        roomListView.setOnItemClickListener { adapterView, view, position, l ->
+
+            val clickedRoom = mRoomList[position]
+
+//            이 작업을 하기 위해서 Activity 새로 생성한다.(ViewRoomDetailActivity)
+            val myIntent = Intent(this, ViewRoomDetailActivity::class.java )
+            startActivity(myIntent)
+
+        }
     }
 }
