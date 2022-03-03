@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import com.neppplus.jickbangcopy_20220227.R
 import com.neppplus.jickbangcopy_20220227.datas.RoomData
 
+//    ListView 사용법 메뉴얼 -> 4번 항목 작업
 class RoomAdapter(
     val mContext : Context,
     val resdId : Int,

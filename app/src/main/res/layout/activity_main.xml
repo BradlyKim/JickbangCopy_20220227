@@ -8,6 +8,8 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+<!--    ListView 사용법 메뉴얼  -> 1번 항목 작업 -->
+
     <ListView
         android:id="@+id/roomListView"
         android:layout_width="match_parent"
