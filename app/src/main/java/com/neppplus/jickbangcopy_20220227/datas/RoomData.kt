@@ -12,9 +12,24 @@ class RoomData(
 ) {
     
 //    ListView 사용법 메뉴얼 ->  7번3) 데이터 가공 함수 작업
-//    층수값 => 1층, 반지하, 지하1층 형태로 가공
+//    층수값 => "1층, 반지하, 지하1층" 형태로 가공 함수
+    fun getFormattedFloor() : String {
+
+        val floorStr : String
+
+        if (floor > 0){
+            floorStr = "${floor}층"
+        }
+        else if (floor == 0) {
+            floorStr = "반지하"
+        }
+        else {
+            floorStr = "지하 ${ -floor }층"
+        }
+        return floorStr
+
+    }
     
-    
-//    가격값 => "8,500", "2억3,500" 형태로 가공
+//    가격값 => "8,500", "2억3,500" 형태로 가공 함수
     
 }
