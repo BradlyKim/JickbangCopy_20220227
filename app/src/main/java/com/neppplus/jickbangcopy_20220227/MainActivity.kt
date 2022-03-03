@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
 
 //            이 작업을 하기 위해서 Activity 새로 생성한다.(ViewRoomDetailActivity)
             val myIntent = Intent(this, ViewRoomDetailActivity::class.java )
+
+//            RoomData.kt 에서 "우리가 만든 클래스를 putExtra - Serializable" 작업하면 에러 사라짐.
+            myIntent.putExtra("room", clickedRoom)
+
             startActivity(myIntent)
 
         }

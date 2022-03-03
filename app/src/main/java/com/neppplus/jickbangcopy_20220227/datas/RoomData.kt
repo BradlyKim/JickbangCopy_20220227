@@ -1,6 +1,7 @@
 package com.neppplus.jickbangcopy_20220227.datas
 
 import android.icu.text.NumberFormat
+import java.io.Serializable
 import java.util.*
 
 //   ListView 사용법 메뉴얼 -> 3번 항목 작업
@@ -13,7 +14,8 @@ class RoomData(
     val floor : Int,
     val description : String,
 
-) {
+//    우리가 만든 클래스를 putExtra - Serializable 작업함
+) : Serializable {
     
 //    ListView 사용법 메뉴얼 ->  7번3) 데이터 가공 함수 작업
 //    층수값 => "1층, 반지하, 지하1층" 형태로 가공 함수
